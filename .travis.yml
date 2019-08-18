@@ -1,9 +1,12 @@
 sudo: required
+language: node_js
+node_js:
+    - "12"
 services:
     - docker
 
 before_install:
-    - docker build -t samirprakash/docker-react -f Dockerfile.dev .
+    - docker build -t samirprakash/docker-react:develop -f Dockerfile.dev .
 
 script:
-    - docker run samirprakash/docker-react npm run test -- --coverage
+    - docker run samirprakash/docker-react:develop npm run test -- --coverage --watchAll=false

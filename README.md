@@ -9,3 +9,7 @@
 
 - `docker build -t samirprakash/docker-react .`
 - `docker run -p 8080:80 samirprakash/docker-react`
+
+#### Travis YAML
+
+- Connect repo with travis using `.travis.yaml`
